@@ -28,14 +28,11 @@ router.post('/burgers/create', function(req,res) {
 	});
 });
 
-// router.put('/cats/update/:id', function(req,res) {
-// 	var condition = 'id = ' + req.params.id;
-//
-// 	console.log('condition', condition);
-//
-// 	cat.update({'sleepy' : req.body.sleepy}, condition, function(data){
-// 		res.redirect('/cats');
-// 	});
-// });
+router.put('/burgers/update/:id', function(req,res) {
+
+ 	burger.updateOne(req.params.id, req.body.eat, function(data){
+ 		res.redirect('/burgers');
+   	});
+});
 
 module.exports = router;

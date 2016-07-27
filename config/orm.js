@@ -15,8 +15,12 @@ var orm = {
       cb(res);
 		});
   },
-  updateOne: function(name, devour){
-    var queryString = "UPDATE burgers SET devoured ='"+ devour + "' WHERE burger_name = '" +name+"';";
+  updateOne: function(selected, devour, cb){
+    var queryString = "UPDATE burgers SET devoured ="+ devour + " WHERE id = " +selected+";";
+    connection.query(queryString, function(err, res){
+      if(err) throw err;
+      cb(res);
+    });
   }
 };
 

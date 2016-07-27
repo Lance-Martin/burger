@@ -9,6 +9,9 @@ var burger = {
 	// cols and vals are arrays
 	insertOne: function (burger, devoured, cb) {
 		orm.insertOne(burger, devoured, function (res) {
+      console.log(burger);
+      console.log(devoured);
+      console.log(res);
 			cb(res);
 		});
 	},

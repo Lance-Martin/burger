@@ -1,0 +1,22 @@
+<h1 style = 'text-align: center'>Eat-Da-Burger!</h1>
+<div class = "burgers"></div>
+
+<ul>
+  {{#each burger}}
+    <li>
+      {{this.burger_name}}
+      <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="sleepy" value="false">
+        <button type="submit">Devour!</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
+<form class="create-update-form" action="burgers/create" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Burger name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+  <button type="submit">Add Burger</button>
+</form>

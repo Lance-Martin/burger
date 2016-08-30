@@ -1,2 +1,5 @@
-# burger
-Week 14 homework
+# Burger devour app
+##Week 14 homework for the Coding Bootcamp at UT Austin.
+###A full stack app following the MVC model.
+###Utilizes a mySQL database with custom ORM for data storage, handlebars for template rendering engine, and Node.js/Express to handle all routing. The layout is built with the bootstrap css framework. The site is deployed on heroku and uses the jawsDB addon.
+    
